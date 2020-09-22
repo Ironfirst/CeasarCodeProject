@@ -1,7 +1,7 @@
 package Opgave;
 
 public class Cypher {
-BokstavSystem bokstav = new BokstavSystem();
+    BokstavSystem bs = new BokstavSystem();
 
     public String cypher(String input, int Secret) {
 
@@ -24,7 +24,11 @@ BokstavSystem bokstav = new BokstavSystem();
             char tempChar= (char) (c+Secret);
             //hvis return char værdi er over 35 skal den begynde fra 10 og tælle videre
             if(Character.getNumericValue(c)+Secret>35){
-                tempChar= (char) Character.(Character.getNumericValue(c)+Secret);
+                tempChar = (char) ((c+Secret)-26);
+                returnString += ""+tempChar;
+            }
+            else if (Character.getNumericValue(c)+Secret<10){
+                tempChar= (char) ((c+Secret)+26);
                 returnString += ""+tempChar;
             }
             // ellers så bare sætte værdien af tempchar på returnString

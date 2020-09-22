@@ -10,13 +10,14 @@ public class Main {
 
 Cypher cy = new Cypher();
 
-        System.out.println(Character.getNumericValue('a'));
-        System.out.println(Character.getNumericValue('z'));
+BokstavSystem bk = new BokstavSystem();
+bk.listen.put('a',1);
 
-        System.out.println(cy.cypher("abe",3));
+
+        System.out.println(cy.cypher("abe",-3));
         System.out.println(cy.cypher("xyz",1));
-        System.out.println(cy.cypher("{",1));
-        System.out.println(Character.getNumericValue('{'));
+
+
 
     }
 }
